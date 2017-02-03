@@ -1,0 +1,11 @@
+[Unit]
+Description=ps3netsrv on :38008
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=CHANGEME
+Group=CHANGEME
+WorkingDirectory=CHANGEME
+ExecStart=/SOME/PATH/TO/ps3netsrv /PS3/ROOT/DIRECTORY
