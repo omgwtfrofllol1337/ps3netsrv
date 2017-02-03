@@ -1315,6 +1315,10 @@ int main(int argc, char *argv[])
 	uint32_t whitelist_end = 0;
 	uint16_t port = NETISO_PORT;
 
+  // flush after newlines even when redirecting
+  // http://stackoverflow.com/questions/1716296/why-does-printf-not-flush-after-the-call-unless-a-newline-is-in-the-format-strin#comment8830923_1716621
+  setlinebuf(stdout);
+
 #ifndef WIN32
 	if (sizeof(off_t) < 8)
 	{
